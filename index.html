@@ -1,186 +1,156 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>COBA TV - Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
+    body {
       margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+    }
+
+    header {
+      background-color: #222;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .banner {
+      width: 100%;
+      height: 220px;
+      background-image: url('https://oaidalleapiprodscus.blob.core.windows.net/private/org-rRCfl2z46Wq9VDZh4wJk5Adk/user-UU4ZocIDzG6FvWiR4uoC3NNs/img-hrNGqkR6Fq8Z1cLS66RMXcL7.png?st=2024-07-24T12%3A12%3A00Z&se=2026-07-24T12%3A12%3A00Z&sp=r&sv=2021-08-06&sr=b&sig=BC4%2FAg%2FdFgTuG2UuQdHvDBoCzRI%2FGlz0CKxVD9Wor%2Bk%3D');
+      background-size: cover;
+      background-position: center;
+      border-bottom: 2px solid #333;
+    }
+
+    .top-nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #1a1a1a;
+      padding: 10px 0;
+      border-bottom: 1px solid #333;
+      flex-wrap: wrap;
+    }
+
+    .top-nav button {
+      background-color: #333;
+      color: white;
+      padding: 10px 16px;
+      margin: 5px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+
+    .top-nav button:hover {
+      background-color: #444;
+    }
+
+    .search-bar {
+      padding: 10px;
+      text-align: center;
+      background-color: #111;
+    }
+
+    .search-bar input {
+      width: 80%;
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid #444;
+      background-color: #222;
+      color: white;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #1a1a1a;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 8px 0;
+      border-top: 1px solid #333;
+    }
+
+    .bottom-nav button {
+      background-color: #333;
+      color: white;
+      padding: 10px 16px;
+      margin: 5px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .bottom-nav .plus-button {
+      font-size: 20px;
+      background-color: #007bff;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
       padding: 0;
-      font-family: 'Roboto', sans-serif;
-    }body {
-  background-color: #f5f6fa;
-  color: #333;
-}
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-header {
-  background: linear-gradient(to right, #2c3e50, #3498db);
-  color: white;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    @media (max-width: 500px) {
+      .top-nav, .bottom-nav {
+        flex-wrap: wrap;
+      }
 
-header .logo {
-  font-size: 1.6rem;
-  font-weight: bold;
-}
-
-nav.top-nav a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.banner {
-  position: relative;
-  background: url('coba-tv-banner.jpg') center/cover no-repeat;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.banner::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.4);
-  z-index: 1;
-}
-
-.banner-text {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: white;
-  font-size: 2rem;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
-  padding: 0 20px;
-}
-
-main {
-  padding: 20px;
-}
-
-.section-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: white;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-}
-
-.card h3 {
-  margin-bottom: 10px;
-}
-
-.card p {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: white;
-  border-top: 1px solid #ddd;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 8px 0;
-  z-index: 1000;
-}
-
-.bottom-nav button, .bottom-nav a {
-  background: none;
-  border: none;
-  color: #555;
-  font-size: 1.2rem;
-  text-decoration: none;
-}
-
-.upload-btn {
-  background: #3498db;
-  color: white;
-  border-radius: 50%;
-  padding: 14px;
-  font-size: 1.5rem;
-  position: relative;
-  top: -20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #888;
-  margin-top: 40px;
-  margin-bottom: 60px;
-}
-
-@media (max-width: 600px) {
-  .banner-text {
-    font-size: 1.4rem;
-  }
-}
-
+      .top-nav button, .bottom-nav button {
+        flex: 1 1 40%;
+        margin: 4px;
+      }
+    }
   </style>
 </head>
-<body>  <!-- Top Navigation -->  <header>
-    <div class="logo">📺 COBA TV</div>
-    <nav class="top-nav">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Stories</a>
-      <a href="#">Videos</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>  <!-- Banner Section -->  <div class="banner">
-    <div class="banner-text">
-      Welcome to COBA TV — Where Stories Come Alive!
-    </div>
-  </div>  <!-- Main Sections -->  <main>
-    <div class="section-grid">
-      <div class="card">
-        <h3>📚 Storybooks</h3>
-        <p>Read amazing animated and realistic stories for kids and adults. Click covers to open stories.</p>
-      </div>
-      <div class="card">
-        <h3>🎥 Short Videos</h3>
-        <p>Watch short animated clips and episodes — swipe, like, and enjoy storytelling like never before.</p>
-      </div>
-      <div class="card">
-        <h3>🚀 Upload Center</h3>
-        <p>Create and upload your own content to COBA TV — animations, stories, or shows.</p>
-      </div>
-      <div class="card">
-        <h3>📬 Contact & Follow</h3>
-        <p>Email us at <b>officialcobatv@gmail.com</b> or follow us on <a href="https://www.facebook.com/share/16qPiKetMk/" target="_blank">Facebook</a>.</p>
-      </div>
-    </div>
-  </main>  <!-- Bottom Navigation -->  <nav class="bottom-nav">
-    <a href="#">home</a>
-    <a href="#">👤</a>
-    <button class="upload-btn">＋</button>
-    <a href="#">message</a>
-    <a href="#">⚙️</a>
-  </nav>  <footer>
-    © 2025 COBA TV. All rights reserved.
-  </footer></body>
-                                        </html>
+<body>
+
+  <header>
+    <h1>COBA TV</h1>
+  </header>
+
+  <div class="banner"></div>
+
+  <div class="top-nav">
+    <button>Home</button>
+    <button>Stories</button>
+    <button>Videos</button>
+    <button>About</button>
+    <button>Contact</button>
+    <button>Settings</button>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search stories or videos...">
+  </div>
+
+  <main>
+    <h2>Welcome to COBA TV</h2>
+    <p>Watch short animated stories, explore adventures, and enjoy fun moments!</p>
+    <p>Click “Stories” to begin reading.</p>
+  </main>
+
+  <div class="bottom-nav">
+    <button>Profile</button>
+    <button class="plus-button">+</button>
+    <button>Settings</button>
+  </div>
+
+</body>
+      </html>
