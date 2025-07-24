@@ -1,30 +1,75 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>COBA TV - Stories</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COBA TV Story Section</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #222;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .story-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1rem;
+      gap: 1.5rem;
+    }
+    .story-item {
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      transition: transform 0.2s;
+      width: 200px;
+    }
+    .story-item:hover {
+      transform: scale(1.05);
+    }
+    .story-item img {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+    .story-title {
+      padding: 0.8rem;
+      text-align: center;
+      font-size: 1rem;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>COBA TV</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="shorts.html">Shorts</a>
-      <a href="stories.html">Stories</a>
-      <a href="login.html">Login</a>
-    </nav>
-  </header>
+    COBA TV Stories
+  </header>  <section class="story-gallery">
+    <!-- The Brave Turtle -->
+    <div class="story-item">
+      <a href="BraveTurtle.html" target="_blank">
+        <img src="BraveTurtle.png" alt="The Brave Turtle">
+        <div class="story-title">The Brave Turtle</div>
+      </a>
+    </div><!-- Grandpa's Train -->
+<div class="story-item">
+  <a href="GrandpaTrain.html" target="_blank">
+    <img src="GrandpaTrain.png" alt="Grandpa's Train">
+    <div class="story-title">Grandpa's Train</div>
+  </a>
+</div>
 
-  <main>
-    <h2>Our Story Collection</h2>
-    <div class="card">
-      <p>Read fiction, non-fiction, and children's stories written by our team and community.</p>
-    </div>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 COBA TV</p>
-  </footer>
+  </section>
 </body>
-</html>
+  </html>
