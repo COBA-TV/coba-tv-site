@@ -2,150 +2,120 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>COBA TV - Home</title>
+  <title>COBA TV</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom, #e6f0ff, #ffffff);
-      color: #001f3f;
-    }header {
-  background-color: #004080;
+      background-color: #e8f1fc;
+      color: #1a1a1a;
+    }/* Top Navbar */
+.top-navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #0066cc;
+  padding: 10px 0;
+}
+
+.top-navbar button {
+  background-color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #0066cc;
+  cursor: pointer;
+}
+
+.top-navbar button:hover {
+  background-color: #cce5ff;
+}
+
+/* Hero Banner */
+.hero {
+  text-align: center;
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
+  padding: 15px 30px;
+  border-radius: 15px;
+  font-size: 2em;
+}
+
+/* Main Content */
+.content {
   padding: 20px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.banner {
-  width: 100%;
-  height: 250px;
-  background-image: url('https://oaidalleapiprodscus.blob.core.windows.net/private/org-rRCfl2z46Wq9VDZh4wJk5Adk/user-UU4ZocIDzG6FvWiR4uoC3NNs/img-hrNGqkR6Fq8Z1cLS66RMXcL7.png?st=2024-07-24T12%3A12%3A00Z&se=2026-07-24T12%3A12%3A00Z&sp=r&sv=2021-08-06&sr=b&sig=BC4%2FAg%2FdFgTuG2UuQdHvDBoCzRI%2FGlz0CKxVD9Wor%2Bk%3D');
-  background-size: cover;
-  background-position: center;
-  border-bottom: 3px solid #004080;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  background-color: #e6f0ff;
-  padding: 12px;
-}
-
-.nav button {
-  background: transparent;
-  border: 2px solid #004080;
-  color: #004080;
-  padding: 10px 14px;
-  margin: 6px;
-  border-radius: 30px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.nav button:hover {
-  background-color: #004080;
-  color: white;
-}
-
-.search-container {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.search-container input {
-  padding: 10px;
-  width: 80%;
-  max-width: 500px;
-  border: 2px solid #004080;
-  border-radius: 30px;
-  background-color: white;
-  color: #004080;
-  font-size: 14px;
-}
-
-main {
-  padding: 30px 20px;
-  text-align: center;
-}
-
-main h2 {
-  color: #003366;
-  margin-bottom: 10px;
-}
-
-.bottom-bar {
+/* Bottom Navbar */
+.bottom-navbar {
   position: fixed;
   bottom: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  background-color: #004080;
-  padding: 12px 0;
+  background-color: #ffffff;
+  border-top: 1px solid #ccc;
+  padding: 10px 0;
 }
 
-.bottom-bar button {
-  background: white;
-  color: #004080;
-  padding: 10px 16px;
+.bottom-navbar button {
+  background-color: #0066cc;
+  color: white;
   border: none;
-  border-radius: 20px;
-  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 25px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
-.bottom-bar .plus {
-  background-color: #00aaff;
-  color: white;
-  font-size: 24px;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
+.bottom-navbar button:hover {
+  background-color: #004c99;
 }
 
 @media (max-width: 600px) {
-  .nav button, .bottom-bar button {
-    font-size: 12px;
-    padding: 8px 12px;
-    margin: 4px;
+  .top-navbar {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .bottom-bar .plus {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
+  .top-navbar button {
+    margin: 5px 0;
   }
 }
 
   </style>
 </head>
 <body>
-  <header>
-    <h1>COBA TV</h1>
-  </header>  <div class="banner"></div>  <div class="nav">
+  <!-- Top Navbar -->
+  <div class="top-navbar">
     <button>Home</button>
     <button>Stories</button>
-    <button>Videos</button>
     <button>About</button>
-    <button>Settings</button>
-  </div>  <div class="search-container">
-    <input type="text" placeholder="Search...">
-  </div>  <main>
-    <h2>Welcome to COBA TV</h2>
-    <p>Explore amazing stories and animated adventures from your screen.</p>
-  </main>  <div class="bottom-bar">
+    <button>Search</button>
+  </div>  <!-- Hero Banner -->  <div class="hero">
+    <img src="<!-- INSERT IMAGE LINK HERE -->" alt="COBA TV Banner" />
+    <h1>Welcome to COBA TV</h1>
+  </div>  <!-- Main Content -->  <div class="content">
+    <p>Enjoy fun stories, animated adventures, and more. Tap the menu below to explore!</p>
+  </div>  <!-- Bottom Navbar -->  <div class="bottom-navbar">
     <button>Profile</button>
-    <div class="plus">+</div>
+    <button style="background-color: #28a745;">+ Upload</button>
     <button>Settings</button>
   </div>
 </body>
