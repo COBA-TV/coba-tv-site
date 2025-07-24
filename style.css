@@ -1,0 +1,145 @@
+/* === Global Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7ff;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* === Header === */
+.site-header {
+  background-color: #002855;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.site-header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.site-header p {
+  font-size: 18px;
+}
+
+/* === Navigation (if needed later) === */
+nav {
+  background-color: #003366;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* === Shorts Section === */
+#shorts-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.shorts-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.video-wrapper {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto 30px auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper video {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+}
+
+.short-info {
+  margin-top: 20px;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.short-info h2 {
+  font-size: 24px;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.short-info p {
+  font-size: 16px;
+  color: #444;
+}
+
+/* === Story Section (for reading page later) === */
+#story-section {
+  padding: 60px 20px;
+  background-color: #f0f0ff;
+  text-align: center;
+}
+
+.story-container {
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.story-container h2 {
+  font-size: 28px;
+  color: #002855;
+  margin-bottom: 20px;
+}
+
+.story-container p {
+  font-size: 18px;
+  color: #333;
+}
+
+/* === Footer === */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  font-size: 14px;
+  color: #777;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .site-header h1 {
+    font-size: 28px;
+  }
+
+  .short-info h2 {
+    font-size: 20px;
+  }
+
+  .short-info p,
+  .story-container p {
+    font-size: 16px;
+  }
+}
