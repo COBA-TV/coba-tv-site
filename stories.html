@@ -1,75 +1,135 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>COBA TV Story Section</title>
+  <meta charset="UTF-8">
+  <title>COBA TV Stories</title>
   <style>
     body {
-      background-color: #111;
-      color: #fff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #e6f0ff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     header {
-      background-color: #222;
-      padding: 1rem;
+      background-color: #0052cc;
+      color: white;
+      padding: 20px;
       text-align: center;
-      font-size: 1.5rem;
+      font-size: 1.5em;
       font-weight: bold;
     }
     .story-gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      padding: 1rem;
-      gap: 1.5rem;
+      padding: 20px;
+      gap: 20px;
     }
-    .story-item {
-      background-color: #1e1e1e;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-      transition: transform 0.2s;
-      width: 200px;
+    .story-card {
+      width: 220px;
+      cursor: pointer;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
     }
-    .story-item:hover {
+    .story-card:hover {
       transform: scale(1.05);
     }
-    .story-item img {
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
-      display: block;
-      height: auto;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
     }
-    .story-title {
-      padding: 0.8rem;
-      text-align: center;
-      font-size: 1rem;
+    .popup-content {
+      background-color: #ffffff;
+      padding: 20px;
+      width: 90%;
+      max-width: 600px;
+      max-height: 80%;
+      overflow-y: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      position: relative;
     }
-    a {
-      color: inherit;
-      text-decoration: none;
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #0052cc;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+    .popup-content h2 {
+      color: #0052cc;
     }
   </style>
 </head>
-<body>
-  <header>
-    COBA TV Stories
-  </header>  <section class="story-gallery">
-    <!-- The Brave Turtle -->
-    <div class="story-item">
-      <a href="BraveTurtle.html" target="_blank">
-        <img src="BraveTurtle.png" alt="The Brave Turtle">
-        <div class="story-title">The Brave Turtle</div>
-      </a>
-    </div><!-- Grandpa's Train -->
-<div class="story-item">
-  <a href="GrandpaTrain.html" target="_blank">
-    <img src="GrandpaTrain.png" alt="Grandpa's Train">
-    <div class="story-title">Grandpa's Train</div>
-  </a>
-</div>
-
-  </section>
-</body>
+<body><header>📖 COBA TV - Story Collection</header><div class="story-gallery">
+  <img src="https://i.postimg.cc/yN6F5Cf6/grok-image-xex6cco.jpg" alt="Silent Step" class="story-card" onclick="showStory('silent')">
+  <img src="https://i.postimg.cc/vmHVXRhr/file-00000000ceb0624394ce5b5318dc1762.png" alt="The Brave Little Turtle" class="story-card" onclick="showStory('turtle')">
+</div><!-- Silent Step Story --><div class="popup" id="popup-silent">
+  <div class="popup-content">
+    <button class="close-btn" onclick="hideStory('silent')">×</button>
+    <h2>Silent Step</h2>
+    <p>
+      Mira once had the brightest laugh in school. But everything changed the night her parents died in a tragic car accident. Mira survived—but her voice didn't. The doctors called it trauma-induced muteness. She called it silence.
+    </p>
+    <p>
+      At first, school was a nightmare. People whispered. Teachers pitied. But Mira watched. And learned. She grew sharp with observation, and her sketches became her voice. When a new boy named Eli transferred to the school, he noticed her drawings. He understood the silence.
+    </p>
+    <p>
+      One evening after school, Mira and Eli sat under a tree. She handed him a drawing: a girl in a storm, reaching toward light. “That’s you,” Eli said softly.
+    </p>
+    <p>
+      A week later, Mira felt something stir when she saw a girl being bullied. Her heart beat louder than ever. She stepped in. Her lips trembled. “Stop,” she whispered.
+    </p>
+    <p>
+      The bullies froze. Eli beamed.
+    </p>
+    <p>
+      Mira had spoken. One silent step at a time, her voice returned.
+    </p>
+    <p><strong>— COBA TV</strong></p>
+  </div>
+</div><!-- Brave Little Turtle Story --><div class="popup" id="popup-turtle">
+  <div class="popup-content">
+    <button class="close-btn" onclick="hideStory('turtle')">×</button>
+    <h2>The Brave Little Turtle</h2>
+    <p>
+      Deep in the warm waters of Coral Bay lived a tiny turtle named Timo. He wasn’t the fastest swimmer, nor the strongest, but he had the biggest heart of all. Timo loved stories of the Great Reef beyond the cove—a mysterious place filled with colors, caves, and creatures no turtle dared to meet alone.
+    </p>
+    <p>
+      One day, a shadow passed over the reef. It was a lost baby dolphin, crying for help. All the sea creatures were afraid. But not Timo. Though his flippers trembled, he swam forward. “Don’t be afraid,” he whispered to the dolphin. “I’ll help you find your family.”
+    </p>
+    <p>
+      Timo led the dolphin through rocky ridges, past jellyfish fields, and over towering seaweed forests. At one point, a hungry barracuda circled them—but Timo cleverly hid in a coral crevice until it passed.
+    </p>
+    <p>
+      After a long journey, they found the dolphin pod near the mouth of the Great Reef. The dolphins chirped joyfully and thanked Timo with a dance of sparkling splashes.
+    </p>
+    <p>
+      When Timo returned to Coral Bay, everyone called him “Timo the Brave.” But Timo just smiled and said, “Sometimes, being small doesn’t mean you can’t do big things.”
+    </p>
+    <p>
+      And from that day on, every young turtle dreamed of being just like him.
+    </p>
+    <p><strong>— COBA TV</strong></p>
+  </div>
+</div><script>
+  function showStory(id) {
+    document.getElementById('popup-' + id).style.display = 'flex';
+  }
+  function hideStory(id) {
+    document.getElementById('popup-' + id).style.display = 'none';
+  }
+</script></body>
   </html>
