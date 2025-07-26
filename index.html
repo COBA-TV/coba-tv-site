@@ -4,89 +4,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>COBA TV - Home</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom, #ffffff, #f0f8ff);
-      color: #333;
-    }
-    header {
-      background-color: #007bff;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    header img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      margin-top: 0.5rem;
-    }
-    nav {
-      display: flex;
-      justify-content: space-around;
-      background-color: #0056b3;
-      padding: 0.75rem 0;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      transition: background-color 0.3s;
-    }
-    nav a:hover {
-      background-color: #003f7f;
-    }
-    main {
-      padding: 2rem;
-      display: grid;
-      gap: 2rem;
-    }
-    .section {
-      background-color: #ffffff;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #f1f1f1;
-      color: #555;
-      font-size: 0.9rem;
-    }
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }body {
+  background-color: #f4f6fb;
+  color: #222;
+}
+
+header {
+  background-color: #1877f2;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-bottom: 4px solid #0b5ed7;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1877f2;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.section-title {
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 2px solid #1877f2;
+  background-color: #e9efff;
+}
+
+.shoot-section {
+  padding: 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.video-section {
+  padding: 20px;
+  background-color: #fdfdfd;
+}
+
+.video-item {
+  background-color: #ffffff;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  margin-top: 30px;
+  padding: 20px;
+  text-align: center;
+  background-color: #e9efff;
+  font-size: 14px;
+}
+
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to COBA TV</h1>
     <img src="https://i.postimg.cc/d3NHj8sc/grok-image-90gjci.jpg" alt="COBA TV Banner" />
-  </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <button onclick="location.href='story.html'">Stories</button>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <main>
-    <div class="section">
-      <h2>About COBA TV</h2>
-      <p>COBA TV brings you creative stories—both animated and written—for children, young adults, and everyone who loves storytelling. Dive into original tales full of life and imagination.</p>
+  </header>  <nav>
+    <a href="#">Home</a>
+    <a href="story.html">Stories</a>
+    <a href="#">About</a>
+    <a href="mailto:officialcobatv@gmail.com">Contact</a>
+  </nav>  <div class="section-title">We Shoot Videos</div>
+  <div class="shoot-section">
+    <p>COBA TV is dedicated to bringing you exciting fictional and animated stories. Whether it's kids' content or adult storytelling, we deliver engaging video and text content that captivates minds.</p>
+  </div>  <div class="section-title">Videos</div>
+  <div class="video-section">
+    <div class="video-item">
+      <strong>Video 1:</strong> Sample animated story preview (upload your video player here)
     </div>
-    <div class="section">
-      <h2>Featured Content</h2>
-      <p>Enjoy our latest storybooks and animations. Click on the "Stories" tab to explore new adventures.</p>
+    <div class="video-item">
+      <strong>Video 2:</strong> Behind the scenes - story creation (upload your video player here)
     </div>
-    <div class="section" id="contact">
-      <h2>Contact Us</h2>
-      <p>Email: <a href="mailto:officialcobatv@gmail.com">officialcobatv@gmail.com</a></p>
-      <p>Facebook: <a href="https://www.facebook.com/share/16qPiKetMk/" target="_blank">COBA TV Facebook Page</a></p>
-    </div>
-  </main>
-  <footer>
-    &copy; 2025 COBA TV. All rights reserved.
+  </div>  <footer>
+    &copy; 2025 COBA TV. All rights reserved. | <a href="https://www.facebook.com/share/16qPiKetMk/" target="_blank">Facebook Page</a>
   </footer>
 </body>
-      </html>
+  </html>
