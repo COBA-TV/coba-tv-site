@@ -3,127 +3,199 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>COBA TV stories</title>
+  <title>COBA TV Stories</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4ff;
       margin: 0;
-      background: #ffffff;
-      color: #000;
+      padding: 0;
     }
 
     header {
-      background-color: #007BFF;
+      background: linear-gradient(90deg, #1a73e8, #0b59c3);
       color: white;
-      padding: 1rem;
       text-align: center;
-      font-size: 1.5rem;
+      padding: 1.2rem;
     }
 
-    .container {
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    nav {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      padding: 1rem;
-      gap: 2rem;
+      background: #1a73e8;
+      flex-wrap: wrap;
     }
 
-    .story-card {
-      width: 300px;
-      text-align: center;
-      cursor: pointer;
-      border: 2px solid #007BFF;
+    nav a {
+      text-decoration: none;
+      color: white;
+      padding: 0.8rem 1.2rem;
+      font-weight: bold;
+      display: block;
+    }
+
+    nav a:hover {
+      background: #0b59c3;
+    }
+
+    .story-section {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 1rem;
+      background: white;
       border-radius: 10px;
-      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .story-cover {
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
       transition: transform 0.2s ease;
     }
 
-    .story-card:hover {
-      transform: scale(1.03);
-    }
-
-    .story-card img {
-      width: 100%;
-      height: auto;
-    }
-
-    .story-title {
-      background-color: #007BFF;
-      color: white;
-      padding: 0.5rem;
-      font-weight: bold;
+    .story-cover:hover {
+      transform: scale(1.02);
     }
 
     .story-content {
       display: none;
-      padding: 1rem;
-      text-align: left;
+      margin-top: 1.2rem;
+      line-height: 1.6;
     }
 
-    .exit-button {
-      background-color: #007BFF;
+    .exit-btn {
+      display: inline-block;
+      margin-top: 1.2rem;
+      padding: 8px 16px;
+      background-color: #1a73e8;
       color: white;
       border: none;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      margin-top: 1rem;
+      border-radius: 6px;
       cursor: pointer;
-      border-radius: 5px;
     }
 
-    @media (max-width: 768px) {
-      .story-card {
-        width: 90%;
-      }
+    .exit-btn:hover {
+      background-color: #0b59c3;
+    }
+
+    .story-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 1rem 0 0.5rem;
+      color: #333;
+    }
+
+    footer {
+      text-align: center;
+      margin: 50px 0 20px;
+      color: #777;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
-<header>COBA TV stories</header>
+  <header>
+    <h1>COBA TV Stories</h1>
+    <p>Read our exciting fictional and animated tales</p>
+  </header>
 
-<div class="container">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#">Animated Stories</a>
+    <a href="story.html">Read Stories</a>
+    <a href="#">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <!-- Silent Step -->
-  <div class="story-card" onclick="showStory('silent-step')">
-    <img src="https://i.postimg.cc/yN6F5Cf6/grok-image-xex6cco.jpg" alt="Silent Step">
-    <div class="story-title">Silent Step</div>
-    <div class="story-content" id="silent-step">
-      <p><strong>By COBA TV</strong></p>
-      <p>Mira once lived a quiet but happy life with her loving parents in the heart of a small town. Everything changed on a rainy evening when their car skidded off the road in a tragic accident. Mira survived, but her parents didn’t. The trauma left her not just emotionally shattered — she lost her voice entirely.</p>
-      <p>Now mute, Mira struggled in a world full of noise. People pitied her, some avoided her. But inside her, a storm brewed. She learned to communicate through drawing, and slowly, her emotions turned into powerful silent art. Her sketches spoke louder than words.</p>
-      <p>One day, her school organized a local art contest. Mira hesitated but eventually entered it with a drawing that depicted her story — a broken girl walking through a storm with no mouth, but a heart glowing like a lantern. The drawing shook everyone.</p>
-      <p>She didn’t just win — she inspired others. Her silence became her strength. She started workshops for children with trauma and taught them how to express through art. Mira never regained her voice, but she no longer needed it. Her steps may have been silent, but they echoed far and wide.</p>
-      <button class="exit-button" onclick="event.stopPropagation(); hideStory('silent-step')">Exit</button>
+  <div class="story-section">
+    <img src="https://i.postimg.cc/8cJP4PvC/silent-step-cover.png" class="story-cover" onclick="toggleStory('story1')" alt="Silent Step Cover" />
+    <div id="story1" class="story-content">
+      <div class="story-title">Silent Step</div>
+      <p>
+        Mira hadn’t spoken a word in over a year. Not since the accident—the one that stole her voice and her parents.
+        The city buzzed outside her apartment window, but inside her world was still. She communicated through scribbles
+        in a worn-out notebook, pages filled with thoughts she could never say aloud.
+      </p>
+      <p>
+        At school, most avoided her. They didn’t know how to interact with someone who didn’t speak. But then came Jayden—
+        the transfer student who sat beside her in art class. Unlike the others, he didn’t treat her like glass. He simply
+        passed her notes with doodles, funny thoughts, and little poems.
+      </p>
+      <p>
+        One afternoon, they found themselves alone in the art room. Rain tapped the window. Mira drew a single step—a foot
+        hovering in motion, with music notes swirling around it. Jayden looked at it, then at her. “Is this how it feels?”
+        he whispered. She nodded.
+      </p>
+      <p>
+        From that day, Jayden began walking beside her during lunch, dancing playfully in the hallway just to make her smile.
+        Mira started filming him. Not with words, but with videos—her silent storytelling. She began uploading short clips
+        to an anonymous account called “Silent Step.” Each one was a moment from their journey.
+      </p>
+      <p>
+        The world noticed. Her videos spoke louder than any words. And slowly, Mira realized her silence was not a weakness.
+        It was a new voice—one that resonated through movement, connection, and emotion.
+      </p>
+      <p>
+        One evening, as Jayden walked her home, he stopped. “You know,” he said, “even if you never speak again, I hear
+        you clearer than anyone.” Mira took his hand, smiled, and for the first time in over a year, stepped forward—
+        not with her feet, but with her heart.
+      </p>
+      <button class="exit-btn" onclick="toggleStory('story1')">Close</button>
     </div>
   </div>
 
-  <!-- The Brave Little Turtle -->
-  <div class="story-card" onclick="showStory('brave-turtle')">
-    <img src="https://i.postimg.cc/vmHVXRhr/file-00000000ceb0624394ce5b5318dc1762.png" alt="The Brave Little Turtle">
-    <div class="story-title">The Brave Little Turtle</div>
-    <div class="story-content" id="brave-turtle">
-      <p><strong>By COBA TV</strong></p>
-      <p>In the deep blue waters of the Coral Kingdom lived a tiny turtle named Timo. He wasn’t the fastest swimmer or the biggest reptile, but he had something no one else did — courage.</p>
-      <p>One day, a strange shadow appeared above the reef. The elder dolphins warned everyone: a fishing boat had dropped its net near their home. Sea creatures panicked. But Timo didn’t. He swam upward, weaving through seaweed and danger, and with his tiny flippers, he gnawed at the net’s rope.</p>
-      <p>Bit by bit, the rope snapped, and the net drifted away. The sea creatures were safe, and the coral reef undisturbed. Timo returned home a hero. From that day, the littlest turtle was known as the bravest in the sea.</p>
-      <button class="exit-button" onclick="event.stopPropagation(); hideStory('brave-turtle')">Exit</button>
+  <div class="story-section">
+    <img src="https://i.postimg.cc/vmHVXRhr/file-00000000ceb0624394ce5b5318dc1762.png" class="story-cover" onclick="toggleStory('story2')" alt="The Brave Little Turtle Cover" />
+    <div id="story2" class="story-content">
+      <div class="story-title">The Brave Little Turtle</div>
+      <p>
+        In a lush forest near the Great Waterfall, lived Tiko, a young turtle with a tiny shell and a big heart. While
+        other turtles stayed hidden and cautious, Tiko dreamed of exploring the far lands beyond the riverbank.
+      </p>
+      <p>
+        One day, the forest grew silent. Birds flew in circles. A fire had started near the mountain, and the wind was
+        pushing smoke toward their peaceful home. The animals panicked, scattering in fear.
+      </p>
+      <p>
+        But Tiko did not run. He saw that baby mice were trapped near a burning log. With determination, he slid over
+        rocks and mud, risking his shell to guide them out. It wasn’t easy. Ash covered his back, and tears stung his
+        eyes, but he pushed forward.
+      </p>
+      <p>
+        When Tiko returned with the last mouse on his back, the animals cheered. The birds flapped above him. Even the
+        owls hooted his name. That night, as stars lit the sky, Tiko sat near the waterfall, feeling something new
+        inside—courage.
+      </p>
+      <p>
+        From that day on, whenever danger came, the animals knew they had someone brave. Not the biggest or fastest—but
+        the boldest.
+      </p>
+      <p>
+        And so, the tale of the Brave Little Turtle was told again and again, as the forest slept under the moonlight.
+      </p>
+      <button class="exit-btn" onclick="toggleStory('story2')">Close</button>
     </div>
   </div>
 
-</div>
+  <footer id="contact">
+    <p>Contact: officialcobatv@gmail.com</p>
+    <p>© 2025 COBA TV</p>
+  </footer>
 
-<script>
-  function showStory(id) {
-    const content = document.getElementById(id);
-    content.style.display = 'block';
-  }
-
-  function hideStory(id) {
-    const content = document.getElementById(id);
-    content.style.display = 'none';
-  }
-</script>
+  <script>
+    function toggleStory(id) {
+      const content = document.getElementById(id);
+      content.style.display = content.style.display === "block" ? "none" : "block";
+      window.scrollTo({ top: content.offsetTop - 50, behavior: 'smooth' });
+    }
+  </script>
 
 </body>
-  </html>
+                          </html>
