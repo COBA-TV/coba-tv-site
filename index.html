@@ -1,141 +1,160 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>COBA TV - Home</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom, #ffffff, #f0f4ff);
-      color: #333;
-    }header {
-  background-color: #0050d8;
-  color: white;
-  padding: 1.5rem 1rem;
-  text-align: center;
-}
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #1a73e8, #121212);
+      color: white;
+    }
 
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
+    header {
+      background: linear-gradient(90deg, #1a73e8, #ff0050);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
 
-header p {
-  font-size: 1.1rem;
-  margin-top: 0.5rem;
-}
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
 
-.banner img {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  display: block;
-}
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #0b59c3;
+      flex-wrap: wrap;
+      padding: 0.5rem 0;
+    }
 
-nav {
-  background-color: #0050d8;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 0.5rem 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  position: relative;
-  z-index: 10;
-}
+    nav a {
+      text-decoration: none;
+      color: white;
+      padding: 1rem 1.5rem;
+      font-weight: bold;
+    }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  margin: 0.2rem;
-  border-radius: 8px;
-  background-color: #0066ff;
-  font-weight: 500;
-  transition: background 0.3s ease;
-}
+    nav a:hover {
+      background: #ff0050;
+    }
 
-nav a:hover {
-  background-color: #004bb5;
-}
+    .banner {
+      width: 100%;
+      overflow: hidden;
+    }
 
-section {
-  padding: 1rem;
-}
+    .banner img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
 
-h2 {
-  color: #0050d8;
-  margin-top: 1rem;
-}
+    .top-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding: 1.5rem 1rem;
+      background-color: #1a1a1a;
+    }
 
-.video-box, .section-box {
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  margin-bottom: 1.5rem;
-}
+    .top-buttons a {
+      padding: 0.8rem 1.5rem;
+      background: #ff0050;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
 
-.contact {
-  background-color: #eaf1ff;
-  padding: 1rem;
-  border-left: 5px solid #0050d8;
-  margin-top: 2rem;
-  border-radius: 8px;
-}
+    .top-buttons a:hover {
+      background: #d60043;
+    }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #f2f2f2;
-  color: #666;
-  font-size: 0.9rem;
-}
+    main {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
 
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-  }
-  nav a {
-    margin: 0.2rem auto;
-  }
-}
+    footer {
+      text-align: center;
+      padding: 2rem 1rem 4rem;
+      font-size: 14px;
+      color: #ccc;
+    }
 
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #0b59c3;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0.8rem 0;
+      z-index: 999;
+    }
+
+    .bottom-bar a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+    }
+
+    .bottom-bar a:hover {
+      background: #ff0050;
+    }
   </style>
 </head>
-<body>  <header>
-    <h1>Welcome to COBA TV</h1>
-    <p>Fictional & Animated Stories that Spark Imagination</p>
-  </header>  <div class="banner">
-    <img src="https://i.postimg.cc/d3NHj8sc/grok-image-90gjci.jpg" alt="COBA TV Banner">
-  </div>  <nav>
-    <a href="#videos">Videos</a>
-    <a href="#animated">Animated Stories</a>
+<body>
+  <header>
+    <h1>COBA TV</h1>
+    <p>Fictional and Animated Stories</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
     <a href="story.html">Read Stories</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>  <section id="videos">
-    <h2>Videos</h2>
-    <div class="video-box">
-      <p>Short engaging videos will appear here.</p>
-    </div>
-  </section>  <section id="animated">
-    <h2>Animated Stories</h2>
-    <div class="section-box">
-      <p>Fun and exciting animated content coming soon.</p>
-    </div>
-  </section>  <section id="about">
-    <h2>About COBA TV</h2>
-    <div class="section-box">
-      <p>COBA TV is a creative platform for storytelling — offering fictional, non-fictional, and animated stories for all ages.</p>
-    </div>
-  </section>  <section id="contact">
-    <h2>Contact Us</h2>
-    <div class="contact">
-      <p>Email us at: <a href="mailto:officialcobatv@gmail.com">officialcobatv@gmail.com</a></p>
-      <p>Facebook: <a href="https://www.facebook.com/share/16qPiKetMk/" target="_blank">COBA TV Facebook</a></p>
-    </div>
-  </section>  <footer>
-    &copy; 2025 COBA TV. All rights reserved.
-  </footer></body>
+    <a href="#">Animated</a>
+    <a href="contact.html">Contact</a>
+    <a href="#">About</a>
+  </nav>
+
+  <div class="banner">
+    <img src="https://i.postimg.cc/8zVPRpJH/coba-banner-wide.png" alt="COBA TV Banner">
+  </div>
+
+  <div class="top-buttons">
+    <a href="story.html">Open Story World</a>
+    <a href="#">Latest Uploads</a>
+    <a href="#">Trending Now</a>
+    <a href="#">Create Story</a>
+  </div>
+
+  <main>
+    <h2>Welcome to COBA TV</h2>
+    <p>Experience a collection of fictional adventures, animated tales, and original storytelling created for all ages. Whether you're here for a bedtime journey or a bold adventure, we've got something for you.</p>
+  </main>
+
+  <footer>
+    <p>© 2025 COBA TV. All rights reserved.</p>
+  </footer>
+
+  <div class="bottom-bar">
+    <a href="#">Home</a>
+    <a href="story.html">Stories</a>
+    <a href="#">Search</a>
+    <a href="#">Profile</a>
+  </div>
+</body>
   </html>
